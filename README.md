@@ -23,7 +23,5 @@ To get the repository to your computer:
 - Once you've navigated to where you want to create your project, type `git clone https://github.com/amandadahlin/tcp-easter.git`
 - Go into the newly created folder by typing `cd tcp-easter`
 - Install all dependencies to typing `yarn` or `npm install`
-- Start it with `yarn start` or `npm start` (it will be running on open[https://localhost:3000])
-- To start editing the code, open the project in a source code editor, e.g. Visual Studio Code (open[https://code.visualstudio.com/])
-
-
+- Start it with `yarn start` or `npm start` (it will be running on open [localhost](https://localhost:3000)
+- To start editing the code, open the project in a source code editor, e.g. [Visual Studio Code](https://code.visualstudio.com/)
