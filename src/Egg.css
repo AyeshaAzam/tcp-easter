@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+  padding-top: 50px;
+  align-items: flex-end;
+}
+
+.egg {
+  width: 60px;
+  height: 90px;
+  margin: 1em auto;
+  margin: 0 5px;
+  background: #fbe9e7;
+  border-radius: 50%/60% 60% 40% 40%;
+  overflow: hidden;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.crack1 {
+  width: 0;
+  top: -14px;
+  position: absolute;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid #fbe9e7;
+  border-right: 10px solid transparent;
+}
+
+.crack2 {
+  width: 0;
+  top: -16px;
+  left: 18px;
+  position: absolute;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 16px solid transparent;
+  border-bottom: 18px solid #fbe9e7;
+}
+
+.crack3 {
+  width: 0;
+  top: -12px;
+  left: 37px;
+  position: absolute;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 13px solid #fbe9e7;
+}
+
+.egg-lower {
+  width: 60px;
+  height: 40px;
+  margin: 1em auto;
+  background: #fbe9e7;
+  border-radius: 0 0 200px 200px;
+  position: relative;
+  transform: rotate(-45deg);
+}
+
+.egg-upper {
+  width: 60px;
+  height: 50px;
+  position: relative;
+  margin: 1em auto;
+  background: #fbe9e7;
+  border-radius: 50%/60% 60% 10px 10px;
+  transform: rotate(235deg);
+}
+
+.upperCrack1 {
+  width: 0;
+  height: 0;
+  top: 42px;
+  right: -40px;
+  position: relative;
+  border-bottom: 20px solid #fbe9e7;
+  border-right: 20px solid transparent;
+  transform: rotate(180deg);
+}
+
+.upperCrack2 {
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 7px;
+  top: 25px;
+  border-bottom: 34px solid #fbe9e7;
+  border-right: 28px solid transparent;
+  transform: rotate(-45deg);
+}
+
+.upperCrack3 {
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 28px;
+  top: 29px;
+  border-bottom: 25px solid #fbe9e7;
+  border-right: 25px solid transparent;
+  transform: rotate(-45deg);
+}
+
+.upperCrack4 {
+  width: 0;
+  height: 0;
+  top: 20px;
+  right: 0px;
+  position: relative;
+  border-bottom: 20px solid #fbe9e7;
+  border-right: 20px solid transparent;
+  transform: rotate(90deg);
+}
