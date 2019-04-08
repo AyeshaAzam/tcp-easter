@@ -9,9 +9,9 @@ class App extends Component {
       <div className="app">
         <div className="easter">
           <h1 className="title">Happy easter!</h1>
-          {/* <Egg /> */}
+          <Egg />
         </div>
-        {/* <EggGame /> */}
+        <EggGame />
       </div>
     );
   }

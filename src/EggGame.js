@@ -3,11 +3,31 @@ import Egg from "./Egg";
 import "./EggGame.css";
 
 class EggGame extends React.Component {
-  state = {
-    nrOfCrackedEggs: 0,
-    highscore: 0,
-    timer: 30
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      nrOfCrackedEggs: 0,
+      highscore: 0,
+      timer: 30,
+      eggs: []
+    };
+  }
+
+  componentDidMount() {
+    const eggs = [];
+    for (let i = 0; i < 20; i++) {
+      eggs.push({
+        id: i,
+        cracked: false,
+        top: `${Math.random() * 100}%`,
+        left: `${Math.random() * 100}%`
+      });
+    }
+    this.setState({
+      eggs: eggs
+    });
+  }
 
   increaseCount = () => {
     const updatedNumber = this.state.nrOfCrackedEggs + 1;
@@ -20,17 +40,27 @@ class EggGame extends React.Component {
   };
 
   restart = () => {
+    const emptyEggs = [];
+
+    for (let i = 0; i < 20; i++) {
+      emptyEggs.push({
+        id: i,
+        cracked: false,
+        top: `${Math.random() * 100}%`,
+        left: `${Math.random() * 100}%`
+      });
+    }
+
     this.setState({
       nrOfCrackedEggs: 0,
-      timer: 30
+      timer: 30,
+      eggs: emptyEggs
     });
   };
 
   componentWillMount() {
     this.interval = setInterval(() => {
       if (this.state.timer <= 0) {
-        clearInterval(this.interval);
-        this.forceUpdate();
         return;
       }
       this.setState({ timer: this.state.timer - 1 });
@@ -41,26 +71,43 @@ class EggGame extends React.Component {
     clearInterval(this.interval);
   }
 
-  render() {
-    const eggs = [];
+  onClick = id => {
+    this.increaseCount();
+    const { eggs } = this.state;
+    eggs[id].cracked = true;
 
-    for (let i = 0; i < 20; i++) {
-      eggs.push(
-        <div
-          key={i}
-          style={{
-            position: "fixed",
-            top: `${Math.random() * 100}%`,
-            left: `${Math.random() * 100}%`
-          }}
-        >
-          <Egg increaseCount={this.increaseCount} />
-        </div>
-      );
-    }
+    this.setState({
+      eggs: eggs
+    });
+  };
+
+  render() {
+    const { eggs } = this.state;
+
+    if (eggs.length === 0) return <Egg />;
+
     return (
       <div className="gameContainer">
-        {this.state.timer !== 0 && <div className="eggs">{eggs}</div>}
+        {this.state.timer !== 0 && (
+          <div className="eggs">
+            {eggs.map((egg, index) => (
+              <div
+                key={index}
+                style={{
+                  position: "fixed",
+                  top: egg.cracked ? egg.top : `${Math.random() * 100}%`,
+                  left: egg.cracked ? egg.left : `${Math.random() * 100}%`
+                }}
+              >
+                <Egg
+                  key={index}
+                  onClick={() => this.onClick(egg.id)}
+                  cracked={egg.cracked}
+                />
+              </div>
+            ))}
+          </div>
+        )}
         <div className="amount">
           <div>{this.state.nrOfCrackedEggs}</div>
           <div className="highscore">Highscore: {this.state.highscore}</div>
