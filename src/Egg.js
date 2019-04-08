@@ -10,6 +10,10 @@ class Egg extends Component {
     this.setState({
       cracked: true
     });
+
+    if (this.props.increaseCount) {
+      this.props.increaseCount();
+    }
   };
 
   render() {
@@ -34,15 +38,7 @@ class Egg extends Component {
         </div>
       );
 
-    return (
-      <div
-        onClick={() => {
-          this.crackEgg();
-          this.props.increateCount();
-        }}
-        className="egg"
-      />
-    );
+    return <div onClick={this.crackEgg} className="egg" />;
   }
 }
 

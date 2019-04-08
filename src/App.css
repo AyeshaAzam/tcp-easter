@@ -5,6 +5,10 @@ h1 {
   font-size: 92px;
 }
 
+.easter {
+  height: 350px;
+}
+
 .app {
   text-align: center;
   background-color: #282c34;
@@ -18,35 +22,6 @@ h1 {
   color: white;
 }
 
-.eggs {
-  display: flex;
-}
-
-.amount {
-  position: fixed;
-  right: 50px;
-  bottom: 50px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.4);
-  height: 100px;
-  width: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  display: flex;
-  flex-direction: column;
-}
-
-.highscore {
-  font-size: 8px;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.restart {
+  margin-top: 10px;
 }

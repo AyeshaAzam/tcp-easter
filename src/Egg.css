@@ -1,7 +1,9 @@
 .container {
   display: flex;
-  padding-top: 50px;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 120px;
 }
 
 .egg {
