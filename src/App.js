@@ -47,6 +47,7 @@ class App extends Component {
     for (let i = 0; i < 20; i++) {
       eggs.push(
         <div
+          key={i}
           style={{
             position: "fixed",
             top: `${Math.random() * 100}%`,
@@ -67,7 +68,7 @@ class App extends Component {
           <div className="highscore">Highscore: {this.state.highscore}</div>
         </div>
         <button onClick={this.restart}>Restart</button>
-        Time left: {this.state.timer}s
+        Time left: {this.state.timer}
       </div>
     );
   }

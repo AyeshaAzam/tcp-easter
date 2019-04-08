@@ -18,17 +18,17 @@ class Egg extends Component {
     if (cracked)
       return (
         <div>
-          <div class="container">
-            <div class="egg-upper">
-              <div class="upperCrack1"> </div>
-              <div class="upperCrack2"> </div>
-              <div class="upperCrack3"> </div>
-              <div class="upperCrack4"> </div>
+          <div className="container">
+            <div className="egg-upper">
+              <div className="upperCrack1"> </div>
+              <div className="upperCrack2"> </div>
+              <div className="upperCrack3"> </div>
+              <div className="upperCrack4"> </div>
             </div>
-            <div class="egg-lower">
-              <div class="crack1"> </div>
-              <div class="crack2"> </div>
-              <div class="crack3"> </div>
+            <div className="egg-lower">
+              <div className="crack1"> </div>
+              <div className="crack2"> </div>
+              <div className="crack3"> </div>
             </div>
           </div>
         </div>
@@ -40,7 +40,7 @@ class Egg extends Component {
           this.crackEgg();
           this.props.increateCount();
         }}
-        class="egg"
+        className="egg"
       />
     );
   }
