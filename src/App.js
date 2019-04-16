@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import Egg from "./Egg";
-import EggGame from "./EggGame";
+import EasterEgg from "./EasterEgg";
+import EasterGame from "./game/EggGame";
 
 class App extends Component {
   render() {
@@ -9,9 +9,9 @@ class App extends Component {
       <div className="app">
         <div className="easter">
           <h1 className="title">Happy easter!</h1>
-          <Egg />
         </div>
-        <EggGame />
+        <EasterGame />
+        {/* <EasterEgg /> */}
       </div>
     );
   }
