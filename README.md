@@ -25,3 +25,13 @@ To get the repository to your computer:
 - Install all dependencies to typing `yarn` or `npm install`
 - Start it with `yarn start` or `npm start` (it will be running on open [localhost](https://localhost:3000))
 - To start editing the code, open the project in a source code editor, e.g. [Visual Studio Code](https://code.visualstudio.com/)
+
+## Instructions
+1. Import <EasterEgg /> in App.js
+2. Go to file EasterEgg.js
+3. Add render method and return statement
+4. Add content in return statement, e.g. <div className=”egg” />
+5. Add constructor and a default state
+6. Create an if-statement to return whole or cracked egg
+7. Add method that updates the state to set cracked=true
+8. Call method that cracks the egg on click
